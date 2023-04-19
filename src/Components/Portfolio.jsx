@@ -19,9 +19,9 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
-import image from "../images/design-desk.jpeg";
+import image from "../images/HT Code-a-thon_ Website Design - HT School.jpg";
 
-const imageAltText = "desktop with books and laptop";
+const imageAltText = "laptop and programming languages";
 
 /**
  * Project list
@@ -31,28 +31,25 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
-    description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+    title: "Spam Classification using Machine Learning",
+    description: "🤖 ML project that classifies emails/SMS to spam or non-spam",
+    url: "https://github.com/bouzenaali/spam-classification",
   },
   {
-    title: "Web Development for Beginners",
-    description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+    title: "puddle",
+    description: "💸 an online marketplace where people can buy and sell items built with django",
+    url: "https://github.com/bouzenaali/puddle",
   },
   {
-    title: "My Resume Site",
-    description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+    title: "snake game",
+    description: "🐍 snake game developed with vanilla java",
+    url: "https://github.com/bouzenaali/snake-game",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "react.js calculator",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "🔢 react.js calculator with all the operations and the logic in it coded by me (didn't use any library for that)",
+    url: "https://github.com/bouzenaali/reactjs-calculator",
   },
 ];
 
@@ -70,12 +67,12 @@ const Portfolio = () => {
         </div>
         <div className="container">
           {projectList.map((project) => (
-            <div className="box" key={project.title}>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
+            <a href={project.url} target="_blank" rel="noopener noreferrer" key={project.title}>
+              <div className="box">
                 <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
-              </a>
-              <p className="small">{project.description}</p>
-            </div>
+                <p className="small">{project.description}</p>
+              </div>
+            </a>
           ))}
         </div>
       </div>
